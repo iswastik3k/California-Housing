@@ -1,0 +1,2 @@
+raw_data_path: "data/raw/california_housing.csv"
+processed_data_path: "data/processed/california_housing_clean.csv"
