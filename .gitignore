@@ -14,7 +14,8 @@ data/processed/*
 data/external/*
 
 # Logs
-logs/
+logs/*
+!logs/.gitkeep
 
 # Environment
 .env

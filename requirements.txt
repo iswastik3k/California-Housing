@@ -1,24 +1,25 @@
 # Core scientific stack
-numpy==1.26.4
-pandas==2.2.2
-scikit-learn==1.5.0
+numpy
+pandas
+scikit-learn
+PyYAML
 
 # Visualization
-matplotlib==3.9.0
-seaborn==0.13.2
+matplotlib
+seaborn
 
 # Experiment tracking
-mlflow==2.12.1
+mlflow
 
 # Gradient boosting (strong regression baseline)
-xgboost==2.0.3
+xgboost
 
 # Jupyter environment
-jupyter==1.0.0
-notebook==7.1.2
+jupyter
+notebook
 
 # Code quality & testing
-pytest==8.2.2
-black==24.4.2
-ruff==0.4.8
-isort==5.13.2
+pytest
+black
+ruff
+isort
