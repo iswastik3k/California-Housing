@@ -1,0 +1,17 @@
+[project]
+name = "California-Housing"
+version = "0.1.0"
+description = "Industry-grade Data Science project using California Housing dataset"
+authors = [{ name="iswastik3k", email="iswastik.3k@gmail.com" }]
+license = "MIT"
+readme = "README.md"
+requires-python = ">=3.9"
+
+[tool.black]
+line-length = 88
+
+[tool.isort]
+profile = "black"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
