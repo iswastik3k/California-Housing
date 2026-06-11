@@ -22,6 +22,11 @@ def build_features(config_path="configs/data_config.yaml"):
     logging.info("Starting feature engineering...")
     df = pd.read_csv(raw_path)
 
+    # Handle missing values in total_bedrooms
+    median_bedrooms = df["total_bedrooms"].median()
+    df["total_bedrooms"].fillna(median_bedrooms, inplace=True)
+
+
     # Derived features
     df["rooms_per_household"] = df["total_rooms"] / df["households"]
     df["bedroom_ratio"] = df["total_bedrooms"] / df["total_rooms"]
