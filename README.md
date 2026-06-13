@@ -137,6 +137,11 @@ Artifacts will be saved in models/, logs in logs/, and plots in reports/.
 ## Reports & Insights
 For a detailed narrative analysis with figures, exploratory plots, feature engineering impact, and SHAP interpretability, see [docs/ANALYSIS.md](docs/ANALYSIS.md).
 
+## Dataset
+[California Housing Prices](https://www.kaggle.com/datasets/camnugent/california-housing-prices)
+<br>
+Source: Kaggle
+
 ## System
 - OS: Arch Linux
 - Python: 3.14 (managed via pyenv + fish shell)
@@ -147,6 +152,7 @@ Developed by [Swastik](https://github.com/iswastik3k)
 
 ## License
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
 
 ## Future Work
 - Extend deployment with CI/CD pipelines for automated builds and testing
