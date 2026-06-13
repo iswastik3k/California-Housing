@@ -109,8 +109,9 @@ Evaluation artifacts are saved in the `reports/` directory:
 - [SHAP Summary](reports/shap_summary.png) — beeswarm plot showing feature impact
 
 ## How to Reproduce Results
-0. **Setup & Configuration** 
-    - [Go to Setup](#setup-instructions) 
+0. **Setup & Configuration** ([Go to Setup](#setup-instructions))
+    <br>
+    <br>
 1. **Preprocess data**
    ```bash
    python -m src.data.make_dataset
