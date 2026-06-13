@@ -20,6 +20,7 @@ It demonstrates industry-grade practices including modular code organization, re
 California-Housing-ML/
 ├── configs/              # Configuration files (YAML/JSON)
 ├── data/                 # Raw and processed datasets
+├── docs/                 # Analysis and insights 
 ├── logs/                 # Data acquisition, feature engineering, and modeling logs
 ├── models/               # Saved model artifacts (ignored in Git, .gitkeep tracked)
 ├── notebooks/            # Exploratory Jupyter notebooks
@@ -36,7 +37,6 @@ California-Housing-ML/
 ├── LICENSE               # MIT License
 └── README.md             # Project documentation
 ```
-
 
 ## Key Features
 - Modular architecture for data preprocessing, feature engineering, model training, and evaluation
@@ -126,6 +126,16 @@ Evaluation artifacts are saved in the `reports/` directory:
     python -m src.evaluation.evaluate_model
     ```
 Artifacts will be saved in models/, logs in logs/, and plots in reports/.
+
+## Project Highlights
+1. End‑to‑end ML pipeline: Covers data ingestion, preprocessing, feature engineering, model training, and evaluation.
+2. Industry‑grade practices: Modular code, config‑driven workflows, reproducibility, logging, and unit testing.
+3. Model performance: Tuned XGBoost achieving RMSE ~26k, MAE ~16k, R² ~0.95.
+4. Interpretability: SHAP plots and feature importance for transparent model insights.
+5. CI/CD discipline: Automated testing with GitHub Actions, badges for build and test status.
+
+## Reports & Insights
+For a detailed narrative analysis with figures, exploratory plots, feature engineering impact, and SHAP interpretability, see [docs/ANALYSIS.md](docs/ANALYSIS.md).
 
 ## System
 - OS: Arch Linux
