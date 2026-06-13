@@ -1,35 +1,51 @@
 # California Housing Project
 
 ## Overview
-End-to-end Data Science project using the California Housing dataset.  
-Demonstrates industry-grade practices: modular code, reproducibility, testing, and deployment.
+This repository contains an end-to-end Data Science project using the California Housing dataset.  
+It demonstrates industry-grade practices including modular code organization, reproducibility, testing, and model interpretability.
 
-## Project Goals
-- Perform exploratory data analysis (EDA)
-- Engineer meaningful features
-- Train and evaluate regression models
-- Package and document results professionally
+## Objectives
+- Perform exploratory data analysis (EDA) to understand the dataset
+- Engineer meaningful features to improve predictive performance
+- Train and evaluate regression models with reproducible pipelines
+- Document results with clear reports and artifacts
 
-## Structure
-- `data/` → raw, processed, external datasets
-- `src/` → modular source code
-- `notebooks/` → exploratory notebooks
-- `reports/` → figures and summaries
-- `tests/` → unit tests
+## Repository Structure
+```
+California-Housing/
+├── configs/              # Configuration files (YAML/JSON)
+├── data/                 # Raw and processed datasets
+├── logs/                 # Data acquisition, feature engineering, and modeling logs
+├── models/               # Saved model artifacts (ignored in Git, .gitkeep tracked)
+├── notebooks/            # Exploratory Jupyter notebooks
+├── reports/              # Evaluation figures and SHAP interpretability plots
+├── src/                  # Modular source code
+│   ├── data/             # Data ingestion and preprocessing
+│   ├── features/         # Feature engineering
+│   ├── models/           # Model training
+│   ├── evaluation/       # Model evaluation and visualization
+│   └── utils/            # Config loader and utilities
+├── tests/                # Unit tests
+├── requirements.txt      # Python dependencies
+├── pyproject.toml        # Project metadata
+├── LICENSE               # MIT License
+└── README.md             # Project documentation
+```
 
-## Features
-- Modular architecture for data, features, models, and visualization
-- Config‑driven pipelines for reproducibility
-- Logging and unit testing for reliability
+
+## Key Features
+- Modular architecture for data preprocessing, feature engineering, model training, and evaluation
+- Config-driven pipelines for reproducibility across environments
+- Logging integrated for transparency and debugging
+- Unit tests for reliability
 - Jupyter notebooks for exploratory analysis
-- Reports and figures for sharing insights
-- Scalable design for future extensions
+- SHAP-based interpretability for model transparency
 
-## Setup
+## Setup Instructions
 ### 1. Clone the repository
 ```bash
 git clone git@github.com:iswastik3k/California-Housing.git
-cd california-housing
+cd California-Housing
 ```
 ### 2. Create a virtual environment (venv)
 ```bash
@@ -43,15 +59,43 @@ pip install -r requirements.txt
 pip install -r requirements.txt
 ```
 ### 4. Configuration
-Config files are stored in configs/ (YAML/JSON).
+Project paths and parameters are stored in configs/.
+Update data_config.yaml to point to your dataset locations.
 
 ## Workflow
-
 - Place raw dataset in data/raw/.
-- Run preprocessing to generate data/processed/.
+- Run preprocessing (src/data/make_dataset.py) to generate data/processed/.
 - Perform EDA in notebooks/01-eda.ipynb.
-- Train models via src/models/.
-- Save logs in logs/ and figures in reports/figures/.
+- Train models via src/models/train_model.py.
+- Evaluate models via src/evaluation/evaluate_model.py.
+- Logs are saved in logs/, figures and SHAP plots in reports/.
+
+## Model Evaluation
+The tuned XGBoost model achieves:
+
+- RMSE: ~26,315
+- MAE: ~16,624
+- R²: ~0.95
+
+Artifacts produced (saved in reports/):
+
+- reports/residuals.png → residuals vs predictions
+- reports/feature_importance.png → split-based feature importance
+- reports/shap_importance.png → SHAP mean(|value|) bar plot
+- reports/shap_summary.png → SHAP beeswarm plot showing feature impact
+
+### Residuals vs Predictions
+Shows error distribution across predicted values. Residuals are centered around 0, with higher variance for expensive homes.
+
+### Feature Importance
+XGBoost split-based importance highlights dominant features like `median_income`.
+
+### SHAP Interpretability
+SHAP plots provide a more reliable view:
+- `median_income`, `latitude`, `longitude` are the strongest drivers.
+- Higher income increases predicted house value.
+- Inland proximity lowers predicted house value.
+
 
 ## License
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
