@@ -17,7 +17,7 @@ It demonstrates industry-grade practices including modular code organization, re
 
 ## Repository Structure
 ```
-California-Housing-ML/
+california-housing-ml/
 ├── configs/              # Configuration files (YAML/JSON)
 ├── data/                 # Raw and processed datasets
 ├── docs/                 # Analysis and insights 
@@ -49,8 +49,8 @@ California-Housing-ML/
 ## Setup Instructions
 ### 1. Clone the repository
 ```bash
-git clone git@github.com:iswastik3k/California-Housing-ML.git
-cd California-Housing-ML
+git clone git@github.com:iswastik3k/california-housing-ml.git
+cd california-housing-ml
 ```
 ### 2. Create a virtual environment (venv)
 ```bash
