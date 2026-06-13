@@ -1,5 +1,9 @@
 # California Housing Project
 
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue)](ca://s?q=Python_version_used_in_project)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green)](ca://s?q=MIT_License_explained)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](ca://s?q=Build_status_badge_explained)
+
 ## Overview
 This repository contains an end-to-end Data Science project using the California Housing dataset.  
 It demonstrates industry-grade practices including modular code organization, reproducibility, testing, and model interpretability.
@@ -95,6 +99,31 @@ SHAP plots provide a more reliable view:
 - `median_income`, `latitude`, `longitude` are the strongest drivers.
 - Higher income increases predicted house value.
 - Inland proximity lowers predicted house value.
+
+## Reports
+Evaluation artifacts are saved in the `reports/` directory:
+
+- [Residuals Plot](reports/residuals.png) — error distribution across predictions
+- [Feature Importance](reports/feature_importance.png) — split-based importance
+- [SHAP Importance](reports/shap_importance.png) — mean(|SHAP value|) bar plot
+- [SHAP Summary](reports/shap_summary.png) — beeswarm plot showing feature impact
+
+## How to Reproduce Results
+0. **Setup & Configuration** 
+    - [Go to Setup](#setup-instructions) 
+1. **Preprocess data**
+   ```bash
+   python -m src.data.make_dataset
+   ```
+2. **Train model**
+    ```bash
+    python -m src.models.train_model
+    ```
+3. **Evaluate model**
+    ```bash
+    python -m src.evaluation.evaluate_model
+    ```
+Artifacts will be saved in models/, logs in logs/, and plots in reports/.
 
 
 ## License
