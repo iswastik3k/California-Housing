@@ -1,5 +1,5 @@
 [project]
-name = "California-Housing"
+name = "california-housing-ml"
 version = "0.1.0"
 description = "Industry-grade Data Science project using California Housing dataset"
 authors = [{ name="iswastik3k", email="iswastik.3k@gmail.com" }]
