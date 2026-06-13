@@ -3,6 +3,7 @@
 [![Python](https://img.shields.io/badge/Python-3.9%2B-blue)](ca://s?q=Python_version_used_in_project)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green)](ca://s?q=MIT_License_explained)
 [![Build Status](https://img.shields.io/badge/build-passing-brightgreen)](ca://s?q=Build_status_badge_explained)
+![Tests](https://github.com/iswastik3k/California-Housing-ML/actions/workflows/tests.yml/badge.svg)
 
 ## Overview
 This repository contains an end-to-end Data Science project using the California Housing dataset.  
@@ -16,7 +17,7 @@ It demonstrates industry-grade practices including modular code organization, re
 
 ## Repository Structure
 ```
-California-Housing/
+California-Housing-ML/
 ├── configs/              # Configuration files (YAML/JSON)
 ├── data/                 # Raw and processed datasets
 ├── logs/                 # Data acquisition, feature engineering, and modeling logs
@@ -48,8 +49,8 @@ California-Housing/
 ## Setup Instructions
 ### 1. Clone the repository
 ```bash
-git clone git@github.com:iswastik3k/California-Housing.git
-cd California-Housing
+git clone git@github.com:iswastik3k/California-Housing-ML.git
+cd California-Housing-ML
 ```
 ### 2. Create a virtual environment (venv)
 ```bash
@@ -129,3 +130,10 @@ Artifacts will be saved in models/, logs in logs/, and plots in reports/.
 
 ## License
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
+
+## Future Work
+- Extend deployment with CI/CD pipelines for automated builds and testing
+- Add hyperparameter tuning with Optuna for improved model performance
+- Integrate MLflow for experiment tracking and reproducibility
+- Expand testing coverage to modeling and evaluation modules
+- Explore cloud deployment options (Azure, AWS) for production readiness
