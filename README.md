@@ -127,6 +127,13 @@ Evaluation artifacts are saved in the `reports/` directory:
     ```
 Artifacts will be saved in models/, logs in logs/, and plots in reports/.
 
+## System
+- OS: Arch Linux
+- Python: 3.14 (managed via pyenv + fish shell)
+- Environment: reproducible venv with requirements.txt + pyproject.toml
+
+## Author
+Developed by [Swastik](https://github.com/iswastik3k)
 
 ## License
 This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
